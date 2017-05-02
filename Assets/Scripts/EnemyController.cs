@@ -18,6 +18,7 @@ public class EnemyController : MonoBehaviour {
     private float deathTimer;
     private float health;
     private float throwTimer;
+    private float shurikenDamage;
     public int Enemies;
     private bool dead;
 
@@ -58,7 +59,7 @@ public class EnemyController : MonoBehaviour {
         }
         else
         {
-            health = 150;
+            health = 175;
             moveSpeed = 4;
             throwForce = 7;
         }
@@ -162,6 +163,10 @@ public class EnemyController : MonoBehaviour {
             S2 = Instantiate(Shuriken, new Vector3(transform.position.x - 0.6f, transform.position.y, transform.position.z), transform.rotation);
             S2.GetComponent<Rigidbody2D>().velocity = Vector2.left * throwForce;
             sc = S2.GetComponent<ShurikenController>();
+            if(gameObject.layer == 11)
+            {
+                sc.damage = 40;
+            }
 
         }
         else

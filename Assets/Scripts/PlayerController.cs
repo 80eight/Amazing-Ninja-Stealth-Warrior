@@ -158,12 +158,12 @@ public class PlayerController : MonoBehaviour {
         if (Physics2D.IsTouchingLayers(c, floor))
         {
             rb.velocity = new Vector2(0, y *  jumpSpeed);
-            if (floorg.transform.position.y - transform.position.y > 0)
+            if (floorg.transform.position.y - transform.position.y > 0.8)
             {
                 OnCeiling = true;
                 if(CeilingTimer < CeilingHangTime)
                 {
-                    transform.eulerAngles = new Vector3(0, 0, 180);
+                    transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 180);
                     if (x > 0)
                     {
                         x *= -1;
@@ -224,7 +224,7 @@ public class PlayerController : MonoBehaviour {
             Destroy(col.gameObject);
             Destroy(sc);
         }
-        else if(col.gameObject.layer == 8)
+        else if(col.gameObject.layer == 8 )
         {
             floorg = col.gameObject;
         }

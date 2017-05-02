@@ -23,7 +23,7 @@ public class MainMenuController : MonoBehaviour {
     public void PlaySneakyButton()
     {
         Application.LoadLevel("Scene1");
-        PlayerPrefs.SetInt("mode", 1);
+        PlayerPrefs.SetInt("Mode", 1);
     }
 
     public void PlayInfinteNinjas()

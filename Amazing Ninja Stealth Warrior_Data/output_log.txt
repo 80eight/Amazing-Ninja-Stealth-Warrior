@@ -17,20 +17,40 @@ Platform assembly: C:\Users\Kevin\Documents\Amazing Ninja Stealth Warrior\Amazin
 Loading C:\Users\Kevin\Documents\Amazing Ninja Stealth Warrior\Amazing Ninja Stealth Warrior_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Kevin\Documents\Amazing Ninja Stealth Warrior\Amazing Ninja Stealth Warrior_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\Kevin\Documents\Amazing Ninja Stealth Warrior\Amazing Ninja Stealth Warrior_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.020 seconds
+- Completed reload, in  0.128 seconds
 Platform assembly: C:\Users\Kevin\Documents\Amazing Ninja Stealth Warrior\Amazing Ninja Stealth Warrior_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Kevin\Documents\Amazing Ninja Stealth Warrior\Amazing Ninja Stealth Warrior_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.086070 ms
+UnloadTime: 2.173099 ms
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.078788 ms
+UnloadTime: 4.803103 ms
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 411.
-Total: 0.313461 ms (FindLiveObjects: 0.026575 ms CreateObjectMapping: 0.018570 ms MarkObjects: 0.259030 ms  DeleteObjects: 0.008645 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 483.
+Total: 3.127252 ms (FindLiveObjects: 0.029136 ms CreateObjectMapping: 0.015048 ms MarkObjects: 0.209401 ms  DeleteObjects: 2.872704 ms)
+
+IndexOutOfRangeException: Array index is out of range.
+  at LevelEnemySpawner.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+IndexOutOfRangeException: Array index is out of range.
+  at LevelEnemySpawner.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+IndexOutOfRangeException: Array index is out of range.
+  at LevelEnemySpawner.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+IndexOutOfRangeException: Array index is out of range.
+  at LevelEnemySpawner.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1dd0 -> priority: 1 
-  Thread -> id: 20a0 -> priority: 1 
+  Thread -> id: 698 -> priority: 1 
+  Thread -> id: 1610 -> priority: 1 

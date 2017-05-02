@@ -7,8 +7,11 @@ public class ShurikenController : MonoBehaviour {
     Rigidbody2D rb;
     EnemyController ec;
     PlayerController pc;
+    public int damage;
+
 	// Use this for initialization
 	void Start () {
+        damage = 30;
         rb = GetComponent<Rigidbody2D>();
         pc = GameObject.Find("Player").GetComponent<PlayerController>();
 	}
@@ -33,12 +36,12 @@ public class ShurikenController : MonoBehaviour {
         if (col.gameObject.CompareTag("Enemy"))
         {
             ec = col.gameObject.GetComponent<EnemyController>();
-            ec.TakeDamage(30);
+            ec.TakeDamage(damage);
             Destroy(gameObject);
         }
         else if(col.gameObject.CompareTag("Player"))
         {
-            pc.TakeDamage(30);
+            pc.TakeDamage(damage);
             Destroy(gameObject);
         }
         else if(col.gameObject.CompareTag("Shuriken"))

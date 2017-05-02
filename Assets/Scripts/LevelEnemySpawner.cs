@@ -8,6 +8,8 @@ public class LevelEnemySpawner : MonoBehaviour {
     public Transform[] SpawnPositions;
     [Space]
     public GameObject Enemy;
+    public GameObject Enemylvl2;
+    public GameObject enemylvl3;
     [Space]
     public GameObject[] enemies;
 
@@ -35,9 +37,10 @@ public class LevelEnemySpawner : MonoBehaviour {
         Clone = Instantiate(Enemy, SpawnPositions[a].position, new Quaternion(0, 0, 0, 0));
     }
 
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         if (GameObject.FindGameObjectWithTag("Enemy") != null)
         {
             Enemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
@@ -46,41 +49,34 @@ public class LevelEnemySpawner : MonoBehaviour {
         {
             Enemies = 0;
         }
-        /*if (Enemies == 0)
+        if (Enemies == 0)
         {
-
             wave += 1;
             pc.health += 20;
-            int Index = ran.Next(0, SpawnPositions.Length);
-            for (int i = 0; i <= AmountSpawning; i++)
+            
+            for(int i = 0; i <= AmountSpawning; i++)
             {
-                if (GameObject.FindGameObjectWithTag("Enemy"))
+                int index = ran.Next(0, SpawnPositions.Length + 1);
+                int enemyType = ran.Next(1, 4);
+                if (enemyType == 1)
                 {
-                    enemies = GameObject.FindGameObjectsWithTag("Enemy");
+                    Instantiate(Enemy, SpawnPositions[index].position, new Quaternion(0, 0, 0, 0));
                 }
-                if (Enemies == 0)
+                else if (enemyType == 2)
                 {
-                    Instantiate(Enemy, SpawnPositions[Index].position, new Quaternion(0, 0, 0, 0));
+                    Instantiate(Enemylvl2, SpawnPositions[index].position, new Quaternion(0, 0, 0, 0));
                 }
-                else
+                else if (enemyType == 3)
                 {
-                    Index = ran.Next(0, SpawnPositions.Length);
-                    if (enemies[i].transform.position.x == SpawnPositions[Index].position.x)
-                    {
-
-                    }
-                    else
-                    {
-                        Instantiate(Enemy, SpawnPositions[Index].position, new Quaternion(0, 0, 0, 0));
-                    }
+                    Instantiate(enemylvl3, SpawnPositions[index].position, new Quaternion(0, 0, 0, 0));
                 }
-            }*/
+            }
         }
-	//}
+    }
 
     void LateUpdate()
     {
-        //AmountSpawning = wave * 2;
-        //WaveText.text = "Wave: " + wave;
+        AmountSpawning = wave * 2;
+        WaveText.text = "Wave: " + wave;
     }
 }
